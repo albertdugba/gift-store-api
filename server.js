@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
+const colors = require("colors");
 const connectDB = require("./config/db");
 
 // route file
@@ -26,7 +27,8 @@ const PORT = process.env.PORT || 8000;
 
 const server = app.listen(PORT, () =>
   console.log(
-    `Server started listenig on port ${PORT} in ${process.env.NODE_ENV} mode`,
+    `Server started listenig in ${process.env.NODE_ENV} mode on ${PORT}`.yellow
+      .bold,
   ),
 );
 
