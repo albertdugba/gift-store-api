@@ -1,13 +1,21 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const morgan = require("morgan");
 
 // route file
 const products = require("./routes/products");
+const logger = require("./middleware/logger");
 
 // load .env variables
 dotenv.config({ path: "./config/config.env" });
 
 const app = express();
+
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
+
+// app.use(logger);
 
 // mount routers
 app.use("/api/v1/products", products);
