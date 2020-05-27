@@ -1,8 +1,16 @@
+const Product = require("../models/Product");
+
 // @desc   Get All Products
 // @route  GET /api/v1/products
 // @access  Public
-exports.getAllProducts = (req, res, next) => {
-  res.status(200).json({ success: true, msg: `All products` });
+exports.getAllProducts = async (req, res, next) => {
+  try {
+    const products = await Product.find();
+    res.status(200).json({ success: true, data: products });
+  } catch (error) {
+    res.status(400).json({ success: false });
+    console.error(error);
+  }
 };
 
 // @desc   Get A Single Products
@@ -14,10 +22,14 @@ exports.getProduct = (req, res, next) => {
 // @desc   Create All Products
 // @route  POST /api/v1/products
 // @access  Private
-exports.createProducts = (req, res, next) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Create product ${req.params.id}` });
+exports.createProducts = async (req, res, next) => {
+  try {
+    const product = await Product.create(req.body);
+    res.status(201).json({ success: true, data: product });
+  } catch (error) {
+    res.status(400).json({ success: false });
+    console.error(error);
+  }
 };
 // @desc   Update All Products
 // @route  UPDATE /api/v1/products/:id

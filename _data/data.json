@@ -1,0 +1,32 @@
+[
+  {
+    "name": "BlueBerry flowers",
+    "description": "The best flower for every occassion",
+    "price": 150,
+    "imageUrl": "https://pixabay.com/photos/red-poppies-flower-blooming-plant-5206943/",
+    "numberInStock": 10,
+    "category": "Birthdays",
+    "tags": ["Birthdays", "Christmas", "Mothers Day"],
+    "slug": "Birthdays"
+  },
+  {
+    "name": "Hand Bag",
+    "description": "Exquisite handbag for every occasion",
+    "price": 250,
+    "imageUrl": "https://cdn.pixabay.com/photo/2015/11/07/11/50/purse-1031547_1280.jpg",
+    "numberInStock": 5,
+    "category": "Bag",
+    "tags": ["Outing"],
+    "slug": "Birthdays"
+  },
+  {
+    "name": "Gift card",
+    "description": "Customisable gift card",
+    "price": 50,
+    "imageUrl": "https://cdn.pixabay.com/photo/2015/11/07/11/50/purse-1031547_1280.jpg",
+    "numberInStock": 5,
+    "category": "Cards",
+    "tags": ["Birthday"],
+    "slug": "Birthdays"
+  }
+]

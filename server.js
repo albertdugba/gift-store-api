@@ -14,6 +14,8 @@ connectDB();
 
 const app = express();
 
+app.use(express.json());
+
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
@@ -22,7 +24,6 @@ if (process.env.NODE_ENV === "development") {
 
 // mount routers
 app.use("/api/v1/products", products);
-
 const PORT = process.env.PORT || 8000;
 
 const server = app.listen(PORT, () =>
@@ -33,7 +34,7 @@ const server = app.listen(PORT, () =>
 );
 
 // UnhandledRejection
-process.on("unHandledRejection", (error, promise) => {
-  console.log(`UnHandled Rejection: ${error.message}`);
+process.on("UnhandledPromiseRejection", (error, promise) => {
+  console.log(`UnHandled Rejection: ${error.message}`.red.bold);
   server.close(() => process.exit());
 });
