@@ -33,7 +33,7 @@ const ProductSchema = mongoose.Schema({
   slug: String,
   tags: {
     type: [String],
-    enum: ["Birthday", "Christmas", "Mothers Day", "Outing"],
+    enum: ["Birthdays", "Christmas", "Mothers Day", "Outing"],
   },
   //   createdAt: {
   //     type: Date(),
