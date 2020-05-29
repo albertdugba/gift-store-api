@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 const ProductSchema = mongoose.Schema({
   name: {
@@ -35,10 +36,15 @@ const ProductSchema = mongoose.Schema({
     type: [String],
     enum: ["Birthdays", "Christmas", "Mothers Day", "Outing"],
   },
-  //   createdAt: {
-  //     type: Date(),
-  //     default: Date.now,
-  //   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+ProductSchema.pre("save", function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 module.exports = mongoose.model("Product", ProductSchema);
