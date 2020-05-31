@@ -6,8 +6,7 @@
     "imageUrl": "https://pixabay.com/photos/red-poppies-flower-blooming-plant-5206943/",
     "numberInStock": 10,
     "category": "Birthdays",
-    "tags": ["Birthdays", "Christmas", "Mothers Day"],
-    "slug": "Birthdays"
+    "tags": ["Birthdays", "Christmas", "Mothers Day"]
   },
   {
     "name": "Hand Bag",
@@ -16,8 +15,7 @@
     "imageUrl": "https://cdn.pixabay.com/photo/2015/11/07/11/50/purse-1031547_1280.jpg",
     "numberInStock": 5,
     "category": "Bag",
-    "tags": ["Outing"],
-    "slug": "Birthdays"
+    "tags": ["Outing"]
   },
   {
     "name": "Gift card",
@@ -26,7 +24,6 @@
     "imageUrl": "https://cdn.pixabay.com/photo/2015/11/07/11/50/purse-1031547_1280.jpg",
     "numberInStock": 5,
     "category": "Cards",
-    "tags": ["Birthday"],
-    "slug": "Birthdays"
+    "tags": ["Birthdays"]
   }
 ]

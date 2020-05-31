@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 
 // route file
 const products = require("./routes/products");
+const auth = require("./routes/auth");
 const errorHandler = require("./middleware/logger");
 
 // load .env variables
@@ -24,6 +25,7 @@ if (process.env.NODE_ENV === "development") {
 
 // mount routers
 app.use("/api/v1/products", products);
+app.use("/api/v1/auth", auth);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 8000;
