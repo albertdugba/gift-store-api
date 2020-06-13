@@ -1,12 +1,12 @@
 [
   {
-    "name": "BlueBerry flowers",
-    "description": "The best flower for every occassion",
+    "name": "Watch",
+    "description": "The best time teller in the world",
     "price": 150,
-    "imageUrl": "https://pixabay.com/photos/red-poppies-flower-blooming-plant-5206943/",
-    "numberInStock": 10,
-    "category": "Birthdays",
-    "tags": ["Birthdays", "Christmas", "Mothers Day"]
+    "imageUrl": "https://cdn.pixabay.com/photo/2017/03/24/19/19/rolex-2171960__480.jpg",
+    "numberInStock": 200,
+    "category": "Jelweries",
+    "tags": ["Jewelry"]
   },
   {
     "name": "Hand Bag",
@@ -15,15 +15,34 @@
     "imageUrl": "https://cdn.pixabay.com/photo/2015/11/07/11/50/purse-1031547_1280.jpg",
     "numberInStock": 5,
     "category": "Bag",
-    "tags": ["Outing"]
+    "tags": ["Outing"],
+    "isFeatured": true
   },
   {
-    "name": "Gift card",
-    "description": "Customisable gift card",
-    "price": 50,
-    "imageUrl": "https://cdn.pixabay.com/photo/2015/11/07/11/50/purse-1031547_1280.jpg",
-    "numberInStock": 5,
-    "category": "Cards",
+    "name": "Bracelet",
+    "description": "Exquisite bracelet made to make you shine one",
+    "price": 90,
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/02/13/22/52/bracelet-1198740__480.jpg",
+    "numberInStock": 25,
+    "category": "Jelweries",
     "tags": ["Birthdays"]
+  },
+  {
+    "name": "Bracelet Bangle",
+    "description": "Bring it on",
+    "price": 190,
+    "imageUrl": "https://cdn.pixabay.com/photo/2015/03/13/14/44/bracelet-671791_1280.jpg",
+    "numberInStock": 15,
+    "category": "Jelweries",
+    "tags": ["Birthdays"]
+  },
+  {
+    "name": "Necklace",
+    "description": "Queens and princesses wear this kind of necklace",
+    "price": 200,
+    "imageUrl": "https://cdn.pixabay.com/photo/2017/03/16/16/46/necklace-2149668__480.jpg",
+    "numberInStock": 10,
+    "category": "Jelweries",
+    "tag": ["Jewelry"]
   }
 ]

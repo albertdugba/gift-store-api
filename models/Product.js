@@ -31,10 +31,12 @@ const ProductSchema = mongoose.Schema({
   category: {
     type: String,
   },
+
+  isFeatured: Boolean,
   slug: String,
   tags: {
     type: [String],
-    enum: ["Birthdays", "Christmas", "Mothers Day", "Outing"],
+    enum: ["Birthdays", "Christmas", "Mothers Day", "Outing", "Jewelry"],
   },
   createdAt: {
     type: Date,

@@ -7,7 +7,7 @@ const connectDB = require("./config/db");
 // route file
 const products = require("./routes/products");
 const auth = require("./routes/auth");
-const errorHandler = require("./middleware/logger");
+const errorHandler = require("./middleware/error");
 
 // load .env variables
 dotenv.config({ path: "./config/config.env" });
@@ -28,7 +28,7 @@ app.use("/api/v1/products", products);
 app.use("/api/v1/auth", auth);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, () =>
   console.log(
