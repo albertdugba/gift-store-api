@@ -33,16 +33,6 @@ exports.protect = asyncHandler(async (req, res, next) => {
   }
 });
 
-// @desc   Get current logged in User
-// @route  GET /api/v1/auth/me
-// @access  Private
-
-exports.getMe = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.user.id);
-
-  res.json({ success: true, data: user });
-});
-
 // grant roles to specific users
 exports.authorize = (...roles) => {
   return (req, res, next) => {

@@ -3,7 +3,6 @@ const User = require("../models/User");
 const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middleware/async");
 const sendEmail = require("../utils/sendEmail");
-const errorHandler = require("../middleware/error");
 
 //============== Register User ==============================//
 // @desc  Register User
@@ -46,6 +45,34 @@ exports.login = asyncHandler(async (req, res, next) => {
   }
 
   sendTokenResponse(user, 200, res);
+});
+
+// @desc   Get current logged in User
+// @route  GET /api/v1/auth/me
+// @access  Private
+
+exports.getMe = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.user.id);
+
+  res.json({ success: true, data: user });
+});
+
+// @desc   Update User Details
+// @route  PUT /api/v1/auth/me
+// @access  Private
+
+exports.updateUserDetails = asyncHandler(async (req, res, next) => {
+  const fieldsToUpdate = {
+    name: req.body.name,
+    email: req.body.email,
+  };
+
+  const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
+    new: true,
+    runValidators: true,
+  });
+
+  res.json({ success: true, data: user });
 });
 
 //============== Forgot Password ==============================//
