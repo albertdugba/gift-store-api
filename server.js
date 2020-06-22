@@ -23,8 +23,6 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-// app.use(logger);
-
 // mount routers
 app.use("/api/v1/products", products);
 app.use("/api/v1/auth", auth);
@@ -34,7 +32,7 @@ const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, () =>
   console.log(
-    `Server started listenig in ${process.env.NODE_ENV} mode on ${PORT}`.yellow
+    `Server started listening in ${process.env.NODE_ENV} mode on ${PORT}`.yellow
       .bold,
   ),
 );
