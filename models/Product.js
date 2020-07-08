@@ -16,6 +16,7 @@ const ProductSchema = mongoose.Schema({
     trim: true,
     maxLength: [400, "Description can'not be more than 400 characters"],
   },
+
   imageUrl: {
     type: String,
     required: true,
@@ -36,7 +37,19 @@ const ProductSchema = mongoose.Schema({
   slug: String,
   tags: {
     type: [String],
-    enum: ["Birthdays", "Christmas", "Mothers Day", "Outing", "Jewelry"],
+    enum: [
+      "Birthdays",
+      "Christmas",
+      "Mothers Day",
+      "Outing",
+      "Jewelry",
+      "Mug",
+      "Flowers",
+      "Perfume",
+      "Decoration",
+      "Diaries",
+      "Breakfast",
+    ],
   },
   createdAt: {
     type: Date,
